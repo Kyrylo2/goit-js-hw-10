@@ -1,1 +1,140 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
+
+* {
+  transition: all 1s ease-out;
+}
+
+body {
+  height: 100vh;
+
+  // background-color: antiquewhite;
+  // background-color: #ff6b0a;
+}
+
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-height: 1.5em;
+
+  &.visible {
+  }
+}
+
+.container {
+  & .country-info.active {
+    max-width: 250px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+input {
+  position: fixed;
+  top: 20%;
+  transform: translateY(-50%);
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #454545;
+  max-width: 960px;
+  padding: 16px;
+  border-radius: 20px;
+  border: 2px solid #757575;
+
+  &:focus-visible {
+    outline-color: #343434;
+  }
+}
+
+.country-list {
+  display: none;
+
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  color: #454545;
+
+  &__item {
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #757575;
+
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  &__title {
+    max-width: 60%;
+    width: auto;
+  }
+}
+
+.country-list.active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.country-info {
+  display: none;
+}
+
+.country-info.active {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+
+  display: flex;
+  gap: 15px;
+  border: 2px solid #757575;
+  border-radius: 20px;
+  color: #454545;
+
+  background-color: #fff;
+}
+
+.country-main-list {
+  list-style-type: none;
+  padding: 20px;
+  margin: 0;
+  text-align: left;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & h1 {
+    margin: 0;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__title {
+    max-width: 75%;
+    width: auto;
+  }
+}
