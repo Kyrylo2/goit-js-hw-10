@@ -39,7 +39,7 @@ const fetchCountries = function (input) {
       const [countryMain] = countryObj;
       return renderMainCountry(countryMain);
     })
-    .catch(function (err) {
+    .catch(function () {
       clearCountryes();
       Notify.failure('Oops, there is no country with that name');
     });
@@ -123,6 +123,6 @@ function changeBackgroundColor(currentFlag) {
       mainTilteH1.style.color = color.isDark ? '#fff' : '#999';
     })
     .catch(e => {
-      console.log(e);
+      // console.log(e);
     });
 }
