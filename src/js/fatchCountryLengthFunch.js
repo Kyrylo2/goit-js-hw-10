@@ -7,7 +7,6 @@ import { createCountryObj } from './createCountryObj';
 export { fatchCountryLengthFunch };
 
 const fatchCountryLengthFunch = function (country) {
-  console.log(country);
   if (country.length >= 10) {
     return Notify.info(
       'Too many matches found. Please enter a more specific name.'

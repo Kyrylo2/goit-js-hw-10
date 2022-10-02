@@ -1,14 +1,7 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
-// * {
-
-// }
-
 body {
   height: 100vh;
-
-  // background-color: antiquewhite;
-  // background-color: #ff6b0a;
 }
 
 h1,
@@ -28,10 +21,6 @@ img {
 }
 
 .container {
-  & .country-info.active {
-    max-width: 250px;
-  }
-
   position: absolute;
   transform: scale(0);
   visibility: hidden;
@@ -123,7 +112,6 @@ input {
   display: flex;
   transform: scale(0);
   opacity: 0;
-  min-height: 300px;
 }
 
 .country-info.active {
@@ -153,6 +141,9 @@ input {
   flex-direction: column;
   gap: 20px;
 
+  width: min-content;
+  min-width: 250px;
+
   & h1 {
     margin: 0;
   }
@@ -165,7 +156,8 @@ input {
   }
 
   &__title {
-    max-width: 75%;
+    text-align: center;
     width: auto;
+    font-size: 1.2em;
   }
 }
