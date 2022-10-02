@@ -6,7 +6,9 @@ import { fatchCountryLengthFunch } from './fatchCountryLengthFunch';
 const BASE_URL = 'https://restcountries.com/v3.1';
 
 const fetchCountries = function (input) {
-  fetch(`${BASE_URL}/name/${input}`)
+  fetch(
+    `${BASE_URL}/name/${input}?fields=name,capital,population,flags,languages`
+  )
     .then(response => {
       return response.json();
     })
