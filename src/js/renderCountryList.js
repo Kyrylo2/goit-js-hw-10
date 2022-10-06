@@ -8,11 +8,11 @@ function renderCountryList(countries) {
       country =>
         `<li class='country-list__item'>
         <img
-          src='${country.flags}'
-          alt='${country.name}'
+          src='${country.flags.png}'
+          alt='${country.name.official}'
           class='country-list__image'
         />
-        <p class='country-list__title'>${country.name}</p>
+        <p class='country-list__title'>${country.name.official}</p>
       </li>`
     )
     .join('');

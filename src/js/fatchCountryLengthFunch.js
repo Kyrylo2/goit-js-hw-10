@@ -2,7 +2,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 import { renderCountryList } from './renderCountryList';
 import { renderMainCountry } from './renderMainCountry';
-import { createCountryObj } from './createCountryObj';
 
 export { fatchCountryLengthFunch };
 
@@ -13,11 +12,9 @@ const fatchCountryLengthFunch = function (country) {
     );
   }
 
-  const countryObj = createCountryObj(country);
-
-  if (countryObj.length > 1 && countryObj.length < 10) {
-    return renderCountryList(countryObj);
+  if (country.length > 1 && country.length < 10) {
+    return renderCountryList(country);
   }
-  const [countryMain] = countryObj;
+  const [countryMain] = country;
   return renderMainCountry(countryMain);
 };

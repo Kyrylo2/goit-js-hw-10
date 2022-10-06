@@ -1,5 +1,8 @@
 export { getStingFromArray };
 
 function getStingFromArray(languages) {
-  return Object.values(languages).join(', ').trim().slice(0, -1);
+  const arrLanguages = Object.values(languages);
+  return arrLanguages.length === 1
+    ? arrLanguages[0]
+    : arrLanguages.join(', ').trim().slice(0, -1);
 }
