@@ -42,6 +42,14 @@ img {
 }
 
 input {
+  // @media screen and (max-width: 780px) {
+  //   position: relative;
+  //   display: flex;
+  //   flex-direction: column;
+  //   top: 10px;
+  //   gap: 30px;
+  // }
+
   position: fixed;
   top: 20%;
   transform: translateY(-50%);
@@ -101,6 +109,12 @@ input {
 .country-list.active {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
+  @media screen and (max-width: 780px) {
+    grid-template-columns: none;
+    top: 20%;
+  }
+
   gap: 15px;
 
   transform: scale(1);
